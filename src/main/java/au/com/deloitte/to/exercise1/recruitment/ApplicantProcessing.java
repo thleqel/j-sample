@@ -4,12 +4,14 @@ import au.com.deloitte.to.exercise1.exceptions.InsufficientDataException;
 import au.com.deloitte.to.exercise1.model.Applicant;
 import au.com.deloitte.to.exercise1.model.Nationality;
 import au.com.deloitte.to.exercise1.model.ResidentStatus;
+import org.apache.log4j.Logger;
 
 /**
  * @author Thanh Le
  */
 public class ApplicantProcessing {
     private Applicant applicant;
+    private Logger logger = Logger.getLogger(this.getClass());
 
     public ApplicantProcessing(Applicant applicant) {
         this.applicant = applicant;
@@ -32,7 +34,7 @@ public class ApplicantProcessing {
             try {
                 throw new InsufficientDataException("Missing applicant information!");
             } catch (InsufficientDataException e) {
-                e.printStackTrace();
+                logger.error(e.getMessage());
             }
         }
         return doesApplicantHasWorkPermit();
