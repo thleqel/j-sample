@@ -29,11 +29,11 @@ public class ApplicantProcessingTest {
     @Test
     public void testIneligibleApplicant(){
         Applicant applicant = new Applicant();
-//        applicant.setFirstNames("First Name");
+        applicant.setFirstNames("First Name");
         applicant.setLastName("Last Name");
         applicant.setAge(30);
         applicant.setNationality(Nationality.OTHER);
-        applicant.setResidentStatus(ResidentStatus.PERMANENT_RESIDENT);
+        applicant.setResidentStatus(ResidentStatus.TEMPORARY_RESIDENT);
         ApplicantProcessing applicantProcessing = new ApplicantProcessing(applicant);
         applicantProcessing.process();
         assertEquals("Proceed Interview", applicant.getStatus());
