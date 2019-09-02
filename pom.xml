@@ -7,7 +7,7 @@
     <groupId>au.com.deloitte.to</groupId>
     <artifactId>automation-tech-exercise</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
         <dependency>
@@ -32,12 +32,8 @@
                 <version>2.20</version>
                 <configuration>
                     <includes>
-                        <include>**/CucumberParallelRunner.java</include>
+                        <include>**/*.java</include>
                     </includes>
-                    <systemPropertyVariables>
-                        <sonar.sources>src</sonar.sources>
-                        <sonar.tests>junit</sonar.tests>
-                    </systemPropertyVariables>
                 </configuration>
             </plugin>
             <plugin>
