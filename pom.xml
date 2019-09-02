@@ -34,6 +34,10 @@
                     <includes>
                         <include>**/CucumberParallelRunner.java</include>
                     </includes>
+                    <systemPropertyVariables>
+                        <sonar.sources>src</sonar.sources>
+                        <sonar.tests>junit</sonar.tests>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
             <plugin>
