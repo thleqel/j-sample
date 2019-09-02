@@ -36,6 +36,6 @@ public class ApplicantProcessingTest {
         applicant.setResidentStatus(ResidentStatus.TEMPORARY_RESIDENT);
         ApplicantProcessing applicantProcessing = new ApplicantProcessing(applicant);
         applicantProcessing.process();
-        assertEquals("Proceed Interview", applicant.getStatus());
+        assertEquals("Archived", applicant.getStatus());
     }
 }
